@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Mariner Assistant Backup, including Google app-data access, encryption, retention and revocation.">
+  <title>Privacy policy · Mariner Assistant Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="site-name">Mariner Assistant Backup</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy policy</a>
+    </nav>
+  </header>
+  <main id="main">
+    <h1>Privacy policy</h1>
+    <p class="date">Last updated: 5 September 2026</p>
+    <p>Mariner Assistant Backup is a Windows backup utility maintained by its owner for personal use. This policy covers the backup utility and this information website.</p>
+
+    <h2>Data used for backup</h2>
+    <p>The utility packages selected personal assistant configuration, instructions, writing preferences, skills, support code and documentation. Credentials, email, vessel folders, indexes and caches are excluded from the archive.</p>
+    <p>Google OAuth credentials are used locally to connect the owner's Google account. Backup status and verification records are kept locally to identify completed backups and errors.</p>
+
+    <h2>Google permission and use</h2>
+    <p>The utility requests only Google Drive app-data access (<code>drive.appdata</code>, called <code>drive.appfolder</code> by rclone). It creates, lists, uploads and downloads files in the application's hidden data area for backup and recovery. It does not request access to ordinary Drive files, Gmail or contacts.</p>
+    <p>Google provides the cloud storage. Data obtained through Google access is used only for this backup and recovery function. It is not sold, used for advertising or sent to AI APIs by the backup job.</p>
+
+    <h2>Protection and retention</h2>
+    <p>Backup contents and the checksum sidecar are encrypted with rclone crypt before upload. File and folder names are not encrypted. Local connection credentials are protected for the current Windows user using Windows DPAPI.</p>
+    <p>Retained local ZIP archives are not encrypted. The utility retains at most two of its own local backup archives, with a combined limit of 100 MiB. Temporary processing can use additional space.</p>
+    <p>Cloud backup versions remain in the Google account until removed by the owner or the storage provider. The utility does not automatically delete cloud versions. Recovery requires the original encryption password and access to the same Google account and application.</p>
+
+    <h2>Removing access and data</h2>
+    <p>The owner can revoke the application's access through the Google account's connected-app settings. Revocation stops further authorized access but does not erase files already copied to the computer or cloud.</p>
+    <p>The owner can remove the application's stored data through Google's app-data controls and remove local backup archives separately. Deleting app data removes cloud backups and can prevent recovery. Google's <a href="https://developers.google.com/workspace/drive/api/guides/appdata">app-data documentation</a> explains this storage area and its deletion behaviour.</p>
+
+    <h2>Website hosting</h2>
+    <p>This website has no sign-in, forms, scripts, analytics or advertising trackers. It does not receive backup contents or Google credentials.</p>
+    <p>When served through GitHub Pages, GitHub logs visitors' IP addresses for security, as described in its <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">hosting documentation</a>. Google and GitHub handle data within their services under their respective <a href="https://policies.google.com/privacy">Google privacy policy</a> and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</p>
+
+    <h2>Contact</h2>
+    <p>For support or privacy enquiries, use the user support email shown on the Mariner Assistant Backup Google OAuth consent screen.</p>
+  </main>
+  <footer><p>Mariner Assistant Backup · <a href="index.html">Home</a></p></footer>
+</body>
+</html>

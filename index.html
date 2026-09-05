@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mariner Assistant Backup: a personal Windows utility for encrypted backup and recovery of selected assistant settings and support files.">
+  <title>Mariner Assistant Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="site-name">Mariner Assistant Backup</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="privacy.html">Privacy policy</a>
+    </nav>
+  </header>
+  <main id="main">
+    <h1>Personal backup and recovery</h1>
+    <p>Mariner Assistant Backup is a personal Windows utility that saves selected assistant settings, instructions, skills, support code and documentation to the owner's Google account.</p>
+    <p>It is maintained for one owner's personal use. There are no public sign-ups or commercial services.</p>
+
+    <h2>How it works</h2>
+    <p>The utility prepares a local backup, encrypts its contents and uploads it to the application's hidden data area in Google Drive. It downloads and checks the uploaded copy to verify that the backup can be decrypted and matches the local archive.</p>
+    <p>After the owner connects the Google account, a Windows scheduled task runs the backup when the computer is on and the owner is logged in.</p>
+
+    <h2>Google access</h2>
+    <p>The application requests permission to read and write its own hidden Google Drive app data. This allows it to create, list, upload and retrieve backup files. The permission does not grant access to ordinary Google Drive documents or folders.</p>
+    <p>The backup excludes credentials, email, vessel folders, indexes and caches. The backup job does not call an AI API.</p>
+
+    <h2>Privacy and support</h2>
+    <p>The <a href="privacy.html">privacy policy</a> explains the data handled, encryption, retention and removal of Google access.</p>
+    <p>For support or privacy enquiries, use the user support email shown on the application's Google OAuth consent screen.</p>
+  </main>
+  <footer><p>Mariner Assistant Backup · <a href="privacy.html">Privacy policy</a></p></footer>
+</body>
+</html>
