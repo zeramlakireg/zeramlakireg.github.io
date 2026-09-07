@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EdgePilot Archive Backup: an owner-operated Linux utility for copying selected project archives to a private, visible Google Drive folder and verifying their contents.">
+  <title>EdgePilot Archive Backup</title>
+  <link rel="canonical" href="https://zeramlakireg.github.io/edgepilot-backup/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="site-name">EdgePilot Archive Backup</div>
+    <nav aria-label="Main navigation">
+      <a href="./" aria-current="page">Home</a>
+      <a href="privacy.html">Privacy policy</a>
+    </nav>
+  </header>
+  <main id="main">
+    <h1>Private, visible project backups</h1>
+    <p>EdgePilot Archive Backup is an owner-operated Linux utility for copying selected existing project archives and their verification manifests to the owner's Google Drive account.</p>
+    <p>It is maintained for personal use, not as a public sign-up service. It is separate from Mariner Assistant Backup and does not manage that application's hidden backup data.</p>
+
+    <h2>How it works</h2>
+    <ol>
+      <li>The owner approves the exact files and connects the intended Google account.</li>
+      <li>The utility checks the originals and uploads them to an ordinary, private Drive folder. The folder and completed files are visible in the owner's Google Drive app and website.</li>
+      <li>It reads back the complete uploaded files and compares their SHA-256 hashes with the approved originals, while checking the destination's identity and private access.</li>
+    </ol>
+    <p>Transfers stream the existing files without creating another local archive. Small private restart records allow status-checked continuation when Google still accepts the saved upload session. Missing, expired or inconsistent restart information stops the transfer for review.</p>
+    <p>The utility runs when invoked by the owner; this setup does not install a scheduled backup task, mount a drive or activate EdgePilot services.</p>
+
+    <h2>Limited Google access</h2>
+    <p>The only requested Google permission is <code>https://www.googleapis.com/auth/drive.file</code>. This permits access to files created by the app or specifically authorized for it, rather than unrestricted access to all Drive files. The utility uses this access for backup creation, inspection and retrieval; it does not request Gmail, contacts or hidden app-data access.</p>
+    <p>The Google permission includes editing and deleting app-authorized files. The current backup utility does not automatically overwrite or delete cloud files or local originals, and it does not share the backup folder.</p>
+
+    <h2>Protection and recovery</h2>
+    <p>Transfers use HTTPS. The current utility copies the existing archive bytes without adding password-based or client-side encryption. A private, visible folder is not a promise of end-to-end encryption.</p>
+    <p>Completed backups can be downloaded through Google Drive. Original files remain in place; removing frozen project records requires a separate reviewed decision. A cloud copy alone is not an immutable-storage or complete system-recovery guarantee.</p>
+    <p class="notice">Publishing this information site or completing Google sign-in does not prove that a backup succeeded. A successful transfer requires its own completed upload and full verification record.</p>
+
+    <h2>Privacy and support</h2>
+    <p>The <a href="privacy.html">privacy policy</a> explains the data handled, local connection records, retention and removal of access.</p>
+    <p>For support or privacy enquiries, use the user support email configured for EdgePilot Archive Backup and shown during Google authorization. Never send passwords, OAuth tokens or client-secret files in a public message.</p>
+  </main>
+  <footer><p>EdgePilot Archive Backup · <a href="privacy.html">Privacy policy</a></p></footer>
+</body>
+</html>
