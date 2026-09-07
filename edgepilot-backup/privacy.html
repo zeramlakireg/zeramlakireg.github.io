@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for EdgePilot Archive Backup: limited Google Drive file access, visible private storage, transfer protection, local credentials and retention.">
+  <title>Privacy policy · EdgePilot Archive Backup</title>
+  <link rel="canonical" href="https://zeramlakireg.github.io/edgepilot-backup/privacy.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="site-name">EdgePilot Archive Backup</div>
+    <nav aria-label="Main navigation">
+      <a href="./">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy policy</a>
+    </nav>
+  </header>
+  <main id="main">
+    <h1>Privacy policy</h1>
+    <p class="date">Last updated: 7 September 2026</p>
+    <p>EdgePilot Archive Backup is a Linux backup utility maintained by its owner for personal use. This policy covers that utility and its information pages under <code>/edgepilot-backup/</code>. It does not replace the separate Mariner Assistant Backup policy.</p>
+
+    <h2>Data handled and purpose</h2>
+    <p>The utility reads and uploads only the existing project archives and accompanying manifests admitted for a particular backup. These files can contain project artifacts and inventories, including file names, paths, sizes and content hashes. The owner must review the selected material before approving transfer; the utility is not a general sensitive-content scanner.</p>
+    <p>Google account identity and storage-quota information are used to confirm the intended destination and available capacity. File identifiers, sizes, checksums, versions and access-permission metadata are used to verify uploads and detect unexpected changes. Local status and verification records describe the backup and any failures.</p>
+    <p>Google API data is used only for the owner's backup, verification and recovery functions, in accordance with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> and its Limited Use requirements. The utility does not sell this data, use it for advertising or AI training, or send backup contents to AI APIs.</p>
+
+    <h2>Google permission and storage</h2>
+    <p>The utility requests only <code>https://www.googleapis.com/auth/drive.file</code>. This gives access to files created by the app or specifically authorized for it, not unrestricted access to the account's Drive. It does not request Gmail, contacts or hidden application-data access. Google's <a href="https://developers.google.com/workspace/drive/api/guides/api-specific-auth">Drive permission documentation</a> describes the scope.</p>
+    <p>Backups are stored in ordinary folders in the owner's Google Drive account, not in a hidden application-data folder. The utility creates private, owner-only destinations and checks those permissions during verification. It does not create public links or grant sharing access. The owner or provider can subsequently change access or remove data.</p>
+    <p>The OAuth permission includes the ability to edit or delete app-authorized files. That permission is broader than the operations performed by this copy-only utility, which does not automatically overwrite or delete cloud files.</p>
+
+    <h2>Transfer protection and local connection records</h2>
+    <p>Google API connections use HTTPS. The current utility uploads the approved files as they already exist; it does not add password-based or client-side encryption. Their names and contents are not concealed from Google by this utility. No end-to-end encryption claim is made.</p>
+    <p>The utility keeps its OAuth client configuration, access and refresh tokens, and upload-session restart records in owner-restricted local files. These records are sensitive and are not uploaded as backup payloads or published on this website. The current Linux setup relies on filesystem permissions; it does not claim that these local records are password-encrypted.</p>
+    <p>Original archive bytes are streamed without staging another local archive. Small local progress records bind the session to the approved source and destination. Recovery checks Google's acknowledged position before continuing, and stops if required state is missing, expired or inconsistent.</p>
+
+    <h2>Verification and retention</h2>
+    <p>The utility checks original content hashes and reads back complete uploaded files to compare their SHA-256 hashes. Only a completed verification record establishes that this particular copy passed those checks. App registration, a visible filename or an interrupted transfer is not sufficient proof.</p>
+    <p>Cloud versions remain until the owner or storage provider removes them. This utility does not automatically prune cloud history or delete local originals. Local credentials and operational records are retained for connection, restart and audit until separately reviewed and removed by the owner.</p>
+    <p>There is no two-package or 100 MiB retention rule in this EdgePilot utility. Those rules belong to a different backup application. Frozen project files remain subject to their own preservation and retirement requirements. This utility does not establish immutable storage or guarantee complete system recovery.</p>
+
+    <h2>Removing access and data</h2>
+    <p>The owner can revoke EdgePilot Archive Backup through the Google account's third-party connection controls. Revocation stops further authorized access; it is not a request to erase previously uploaded ordinary Drive files or local copies.</p>
+    <p>The owner can manage visible backup files through Google Drive and remove local connection records separately. Deleting or emptying the trash for the only usable backup can prevent recovery. Any removal of original frozen records requires a separate reviewed decision.</p>
+    <p>Retain the Google account identity, client recovery information and backup recovery instructions in a secure recovery kit outside the PC. Do not publish this material with the information pages.</p>
+
+    <h2>Information website and providers</h2>
+    <p>These information pages contain no sign-in form, upload form, JavaScript, analytics or advertising trackers. They do not collect backup contents or Google credentials. Only the public information pages and their stylesheet are published here.</p>
+    <p>Google provides account authorization and backup storage. GitHub Pages hosts this information site and logs visitor IP addresses for security, as described in its <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">hosting documentation</a>. Each provider handles data within its services under its own <a href="https://policies.google.com/privacy">Google privacy policy</a> or <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</p>
+
+    <h2>Contact and updates</h2>
+    <p>For support or privacy enquiries, use the user support email configured for EdgePilot Archive Backup and shown during Google authorization. This policy must be updated if the utility's permissions, encryption, storage or retention behavior changes.</p>
+  </main>
+  <footer><p>EdgePilot Archive Backup · <a href="./">Home</a></p></footer>
+</body>
+</html>
